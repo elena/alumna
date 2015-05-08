@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -48,6 +49,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
 )
 
 ROOT_URLCONF = 'project.urls'
@@ -63,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -102,6 +106,30 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 ## Custom settings
+
+LOGIN_REDIRECT_URL = '/'
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+SOCIAL_AUTH_ADMIN_USER_SEARCH_FIELDS = ['username', 'first_name', 'email']
+
+SOCIAL_AUTH_TWITTER_KEY = 'LsMZRp9s4fma1uG9qmmwgFaO2'
+SOCIAL_AUTH_TWITTER_SECRET = os.environ.get('TWITTER_SECRET_KEY')
+
+SOCIAL_AUTH_FACEBOOK_APP_ID = '393728747486603'
+SOCIAL_AUTH_FACEBOOK_API_SECRET = os.environ.get('FACEBOOK_SECRET_KEY')
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+SOCIAL_AUTH_GOOGLE_PLUS_KEY = '443785959604-vkb1p394ajmm3qgotteqtjv2it6vtp95.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_PLUS_SECRET = os.environ.get('GPLUS_SECRET_KEY')
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/home/'
+SOCIAL_AUTH_LOGIN_URL = '/'
+
+AUTHENTICATION_BACKENDS = (
+   'social.backends.google.GooglePlusAuth',
+   'social.backends.twitter.TwitterOAuth',
+   'django.contrib.auth.backends.ModelBackend',
+)
 
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()

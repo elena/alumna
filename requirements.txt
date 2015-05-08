@@ -3,3 +3,4 @@ Django==1.8.1
 gunicorn==19.3.0
 whitenoise==1.0.6
 psycopg2==2.5.4
+python-social-auth==0.2.9
