@@ -36,40 +36,54 @@
 
 {% block content %}
 
+{% if user and not user.is_anonymous %}
 
+{% else %}
 <div>
-   <h1>Log in </h1>
+   <h1>Register</h1>
 
- <p>
    <ul>
 
 {% comment %}
-     <li>
-       <a href="{# url 'social:begin' 'facebook' %}?next={{ request.path }} #}">Login with Facebook</a>
-     </li>
-     <li>
-<form id="google-plus" method="post" action="{% url 'social:complete' "google-plus" %}">
+<h1>Log in</h1>
+<h2>Twitter</h2>
+<p><a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a></p>
+<h2>Email</h2>
+<ul>
+  <li>  <a href="{% url 'auth:login' %}?next={{ request.path }}">Login with Twitter</a></li>
+</ul>
+
+
+<li>
+  <a href="{# url 'social:begin' 'facebook' %}?next={{ request.path }} #}">Login with Facebook</a>
+</li>
+<li>
+  <form id="google-plus" method="post" action="{% url 'social:complete' "google-plus" %}">
     {% csrf_token %}
     <input id="at" type="hidden" name="access_token" value="" />
     <input id="code" type="hidden" name="code" value="" />
-</form>
-     </li>
-
+  </form>
+</li>
 {% endcomment %}
-     <li>
-       <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a>
-     </li>
 
-   </ul>
- </p>
-
-{% if user and not user.is_anonymous %}
- <h1>Other</h1>
- <form id="google-plus" method="post" action=".">
+<h2>Twitter</h2>
+<p>
+<li>
+  <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Register with Twitter</a>
+</li>
+</p>
+<h2>Create an Account with Username</h2>
+<li>
+  <form id="google-plus" method="post" action=".">
     {% csrf_token %}
     {{ form.as_ul }}
     <input type=submit>
-</form>
+  </form>
+</li>
+   </ul>
+
+
+
 {% endif %}
 
 
