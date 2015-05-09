@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 urlpatterns = [
     url(r'^$', CreateView.as_view(template_name='home.html',
-                                 form_class=UserCreationForm, success_url='/'), name='home'),
+                                 form_class=UserCreationForm, success_url='/event/shehacks-2015'), name='home'),
     url('^social/', include('social.apps.django_app.urls', namespace='social')),
     url('^auth/', include('django.contrib.auth.urls', namespace='auth')),
 

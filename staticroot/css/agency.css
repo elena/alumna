@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Lato;
 }
 
 .text-muted {
@@ -42,7 +42,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #fec503;
+    color: #A06B87;
 }
 
 h1,
@@ -52,7 +52,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Lato;
     font-weight: 700;
 }
 
@@ -69,12 +69,12 @@ h6 {
 }
 
 .btn-primary {
-    border-color: #fed136;
+    border-color: #A06B87;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Lato;
     font-weight: 700;
     color: #fff;
-    background-color: #fed136;
+    background-color: #A06B87;
 }
 
 .btn-primary:hover,
@@ -82,9 +82,9 @@ h6 {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    border-color: #f6bf01;
+    border-color: #A06B87;
     color: #fff;
-    background-color: #fec503;
+    background-color: #A06B87;
 }
 
 .btn-primary:active,
@@ -184,7 +184,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #fec503;
+    color: #A06B87;
 }
 
 .navbar-default .navbar-collapse {
@@ -202,7 +202,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #fed136;
+    background-color: #A06B87;
 }
 
 .navbar-default .nav li a {
@@ -216,7 +216,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #fed136;
+    color: #A06B87;
 }
 
 .navbar-default .navbar-nav>.active>a {
@@ -266,9 +266,9 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    /*background-image: url(../img/header-bg.jpg);*/
 
     background-image: url(../img/main-bg.jpg);
+
     /*background-color: #4B3F4F;*/
     background-position: center center;
     background-repeat: none;
@@ -762,7 +762,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #fed136;
+    background-color: #A06B87;
 }
 
 .btn:focus,
@@ -855,7 +855,7 @@ ul.social-buttons li a:active {
 
 ::selection {
     text-shadow: none;
-    background: #E0AAD1;
+    background: #A06B87;
 }
 
 img::selection {
@@ -872,10 +872,12 @@ body {
 
 
 
-.signin {
+.form-signin {
   width:400px;
   text-align: center;
   margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
