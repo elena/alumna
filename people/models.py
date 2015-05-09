@@ -34,7 +34,7 @@ class Person(models.Model):
         super(Person, self).save()
         event = Event.objects.get(pk=1)
         role = Role.objects.get(pk=3)
-        PersonEvent.objects.get_or_create(person=self, event=event, role=role)
+        PersonRole.objects.get_or_create(person=self, event=event, role=role)
 
 
 class PersonRole(models.Model):
