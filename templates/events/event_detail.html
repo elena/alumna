@@ -11,10 +11,9 @@
                     <h2 class="section-heading">{{object.name}}</h2>
                     <h3 class="section-subheading text-muted">{{object.chapter}} </h3>
 
-{% for p in object.personrole_set.all %}
-                    <a href="/alumna/{{p.slug}}">{{p.person.name}}<br>
-{% endfor %}
-
+                    {% for p in object.personrole_set.all %}
+                    <a href="/alumna/{{p.slug}}">{{p.person.user.first_name}} {{p.person.user.last_name}}<br>
+                    {% endfor %}
 
                 </div>
             </div>

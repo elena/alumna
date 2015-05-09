@@ -38,8 +38,8 @@
 
 <body id="page-top" class="index">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+  <!-- Navigation -->
+      <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -56,13 +56,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="#page-top"></a>
+                        <a href="/"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">ABOUT</a>
+                        <a class="page-scroll" href="/">ABOUT</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/event/shehack-2015">Sydney SheHack 2015</a>
+                        <a class="page-scroll" href="/event/shehacks-2015">Sydney SheHack 2015</a>
                     </li>
                     {% if user and not user.is_anonymous %}
                     <li><a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Twitter auth</a></li>
@@ -74,6 +74,7 @@
                     <li><a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with twitter</a></li>
                     {% endif %}
 
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -84,6 +85,7 @@
     {% block content %}
     {% endblock %}
 
+    {% block footer %}
     <footer>
         <div class="container">
             <div class="row">
@@ -100,17 +102,16 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
+                        <li><a href="/">Privacy Policy</a>
                         </li>
-                        <li><a href="#">Terms of Use</a>
+                        <li><a href="/">Terms of Use</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-
-
+    {% endblock %}
 
 
     <!-- jQuery -->
