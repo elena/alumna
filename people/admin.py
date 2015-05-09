@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Person, PersonRole, PersonSkill, PersonEvent
+from .models import Role, Skill, Event, Person, PersonRole, PersonSkill, PersonEvent
 
 
 class PersonRoleInline(admin.TabularInline):
@@ -23,3 +23,6 @@ class PersonAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Person, PersonAdmin)
+admin.site.register(Event)
+admin.site.register(Skill)
+admin.site.register(Role)
