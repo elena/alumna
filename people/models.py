@@ -19,6 +19,7 @@ class Skill(models.Model):
 
 class Person(models.Model):
     user = models.OneToOneField(User)
+    name = models.CharField(max_length=128, null=True, blank=True)
     slug = models.SlugField(null=True, blank=True)
     img_url = models.TextField(null=True, blank=True)
     description = models.TextField(null=True, blank=True)
@@ -28,6 +29,12 @@ class Person(models.Model):
             return self.user.get_full_name()
         else:
             return self.user.username
+
+    def save(self, *args, **kwargs):
+        super(Person, self).save()
+        event = Event.objects.get(pk=1)
+        role = Role.objects.get(pk=3)
+        PersonEvent.objects.get_or_create(person=self, event=event, role=role)
 
 
 class PersonRole(models.Model):
