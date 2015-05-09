@@ -36,6 +36,43 @@
 
 {% block content %}
 
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+
+              <ul>
+<h2>Twitter</h2>
+<p>
+<li>
+  <a class="btn btn-lg btn-primary btn-block" href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Register with Twitter</a>
+</li>
+</p>
+<br>
+<br>
+<br>
+<h2>Create an Account with Username</h2>
+<li>
+  <form id="google-plus" method="post" action=".">
+    {% csrf_token %}
+    <input type='hidden' name='csrfmiddlewaretoken' value='JrRFXt1GMOjPZzTYqAQyUgh9YB5AGzPQ' />
+    <li>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input id="id_username" class="form-control" placeholder="Email address" maxlength="30" name="username" type="text" />
+    </li>
+<li><label for="id_password1">Password:</label> <input id="id_password1" name="password1" type="password" class="form-control" placeholder="Password" required></li>
+<li><label for="id_password2">Password confirmation:</label> <input id="id_password2" name="password2" type="password" class="form-control" placeholder="Enter same password for confirmation." required /> </li>
+    <li><input class="btn btn-lg btn-primary btn-block" type=submit></li>
+  </form>
+</li>
+   </ul>
+
+
+            </div>
+        </div>
+    </header>
+
+
 {% if user and not user.is_anonymous %}
 
 {% else %}
@@ -44,7 +81,28 @@
 
    <ul>
 
-{% comment %}
+     {% comment %}
+
+              <!-- signin -->
+                    <div class="signin">
+                      <div class="logo">
+                        <img src="" alt="logo">
+                      </div>
+                      <form class="form-signin">
+
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                          </label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                      </form>
+                    </div>
+                <!-- signin -->
+
 <h1>Log in</h1>
 <h2>Twitter</h2>
 <p><a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a></p>
@@ -66,21 +124,6 @@
 </li>
 {% endcomment %}
 
-<h2>Twitter</h2>
-<p>
-<li>
-  <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Register with Twitter</a>
-</li>
-</p>
-<h2>Create an Account with Username</h2>
-<li>
-  <form id="google-plus" method="post" action=".">
-    {% csrf_token %}
-    {{ form.as_ul }}
-    <input type=submit>
-  </form>
-</li>
-   </ul>
 
 
 
