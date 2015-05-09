@@ -7,6 +7,7 @@ class Event(models.Model):
     name = models.CharField(max_length=128)
     date = models.DateField()
     desc = models.TextField(null=True, blank=True)
+    slug = models.SlugField(null=True, blank=True)
 
     def __str__(self):
         return self.name

@@ -19,6 +19,7 @@ class Skill(models.Model):
 
 class Person(models.Model):
     user = models.OneToOneField(User)
+    slug = models.SlugField(null=True, blank=True)
     img_url = models.TextField(null=True, blank=True)
     description = models.TextField(null=True, blank=True)
 
