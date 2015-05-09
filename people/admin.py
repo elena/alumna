@@ -23,6 +23,5 @@ class PersonAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Person, PersonAdmin)
-admin.site.register(Event)
 admin.site.register(Skill)
 admin.site.register(Role)
