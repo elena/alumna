@@ -9,5 +9,12 @@ urlpatterns = [
                                  form_class=UserCreationForm, success_url='/'), name='home'),
     url('^social/', include('social.apps.django_app.urls', namespace='social')),
     url('^auth/', include('django.contrib.auth.urls', namespace='auth')),
+
+    # Alumna
+    url(r'^alumna/', include('people.urls')),
+
+    # Events
+    url(r'^event/', include('events.urls')),
+
     url(r'^admin/', include(admin.site.urls)),
 ]

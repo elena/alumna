@@ -1,3 +1,18 @@
-from django.shortcuts import render
+# -*- coding: utf-8 -*-
+from django.views import generic
+from .models import Person
 
-# Create your views here.
+
+class QuerySetMixin(object):
+
+    model = Person
+
+
+class DetailView(QuerySetMixin, generic.DetailView):
+
+    pass
+
+
+class ListView(QuerySetMixin, generic.ListView):
+
+    pass
