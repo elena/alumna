@@ -3,6 +3,7 @@
 .Python
 .DS_Store
 .coverage
+.env
 /db.sqlite3
 /bin/
 /build/
@@ -16,5 +17,8 @@
 /share/
 /src/
 /venv/
-secrets.json
 project/local_settings.py
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
