@@ -41,6 +41,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'storages',
+
+    # Project apps
+    'networks',
 )
 
 MIDDLEWARE_CLASSES = (
