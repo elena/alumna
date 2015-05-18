@@ -119,29 +119,33 @@ USE_TZ = True
 SITE_ID = 1
 
 STATIC_URL = '/static/'
-
-AWS_HEADERS = {
-     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-     'Cache-Control': 'max-age=94608000',
-}
-AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
-AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_KEY']
-AWS_STORAGE_BUCKET_NAME = 'alumna-dev'
-AWS_S3_CUSTOM_DOMAIN = '{0}.s3.amazonaws.com'.format(AWS_STORAGE_BUCKET_NAME)
-
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+MEDIA_URL = '/media/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static/')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'public', 'media/')
 
-STATIC_URL = 'https://{0}/static/'.format(AWS_S3_CUSTOM_DOMAIN)
-MEDIA_URL = 'https://{0}/media/'.format(AWS_S3_CUSTOM_DOMAIN)
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
+if 'RDS_HOSTNAME' in os.environ:
+    AWS_HEADERS = {
+         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+         'Cache-Control': 'max-age=94608000',
+    }
+    AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+    AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_KEY']
+    AWS_STORAGE_BUCKET_NAME = 'alumna-dev'
+    AWS_S3_CUSTOM_DOMAIN = '{0}.s3.amazonaws.com'.format(AWS_STORAGE_BUCKET_NAME)
+
+    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+    STATIC_URL = 'https://{0}/static/'.format(AWS_S3_CUSTOM_DOMAIN)
+    MEDIA_URL = 'https://{0}/media/'.format(AWS_S3_CUSTOM_DOMAIN)
+
+    STATICFILES_FINDERS = (
+        'django.contrib.staticfiles.finders.FileSystemFinder',
+        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    )
+
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
