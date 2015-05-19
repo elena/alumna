@@ -1,6 +1,7 @@
 Django==1.8.1
 boto==2.38.0
-django-storages-redux
-psycopg2==2.5.4
+django-flat-theme==0.9.3
+django-storages-redux==1.2.3
 pillow
-django-flat-theme
+psycopg2==2.5.4
+sorl-thumbnail==12.2
