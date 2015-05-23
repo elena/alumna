@@ -13,6 +13,6 @@ class DetailView(QuerySetMixin, generic.DetailView):
     pass
 
 
-class ListView(QuerySetMixin, generic.ListView):
+# class ListView(QuerySetMixin, generic.ListView):
 
-    pass
+#     pass

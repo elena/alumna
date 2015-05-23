@@ -41,9 +41,12 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'storages',
+    'sorl.thumbnail',
 
     # Project apps
     'networks',
+    'events',
+    'people',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -68,6 +71,8 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -98,6 +103,13 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            # 'NAME': os.environ['RDS_DB_NAME'],
+            # 'USER': os.environ['RDS_USERNAME'],
+            # 'PASSWORD': os.environ['RDS_PASSWORD'],
+            # 'HOST': 'localhost',
+            # 'PORT': '5432',
+
         }
     }
 
