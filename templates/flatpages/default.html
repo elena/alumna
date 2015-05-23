@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+{% load thumbnail %}
+
+   <section id="networks">
+        <header>
+            <div class="wrapper">
+                <h1>{{ flatpage.title }}</h1>
+                <span class="subtitle">Alumna network.</span>
+            </div>
+        </header>
+
+        <section id="networks-table">
+            <div class="wrapper">
+
+            <content>
+              {{ flatpage.content }}
+              <div class="clr"></div>
+            </content>
+
+            </div>
+        </section>
+
+        <div class="wrapper">
+
+          <a href="/" class="cta">Join!</a>
+            {# <span>or take a look at <a href="/features/" class="link">the full list of features</a></span> #}
+        </div>
+    </section>
+
+{% endblock %}

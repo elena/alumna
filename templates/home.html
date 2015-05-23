@@ -1,89 +1,88 @@
 {% extends 'base.html' %}
 
-{% block head %}
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '393728747486603',
-      xfbml      : true,
-      version    : 'v2.3'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<div id="signinButton">
-    <span id="signinButton">
-        <span
-            class="g-signin"
-            data-callback="signInCallback"
-            data-clientid="{{ plus_id }}"
-            data-cookiepolicy="single_host_origin"
-            data-requestvisibleactions="http://schemas.google.com/AddActivity"
-            data-scope="https://www.googleapis.com/auth/plus.login">
-        </span>
-    </span>
-</div>
-{% endblock %}
-
-
 {% block content %}
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
+<div id="background_parallax" data-speed="2" data-type="background">
+  <div id="tagline">
+    <h1
+       style="font-weight: normal; font-family: 'Satisfy', cursive;"
+       >
+      Connect with your friends<br> from <a href="/events/">this</a> event!
+    </h1>
+    <p>Easily stay in contact with your new and old friends in your community.</p>
 
-              <ul>
-{# <h2>Twitter</h2> #}
-<p>
-<li>
-  <a class="btn btn-lg btn-primary btn-block" href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Register with Twitter</a>
-</li>
-</p>
+    <div class="cls"></div>
+    <form id="form-login" action="." class="formular" method="post" autocomplete="off">
+      {% csrf_token %}
+      <!-- fake inputs to prevent Chrome from autofiling inputs -->
+      <input type="text" style="display:none;" />
+      <input type="password" style="display:none;" />
+      <!-- end fake inputs to prevent Chrome from autofiling inputs -->
+      <table>
+      {{ form.as_table }}
+      </table>
+     <input type="submit" name="go" value="Join!" />
+    </form>
 
-{% comment %}
-<h2>Create an Account with Username</h2>
-  <form method="post" action=".">
-    {% csrf_token %}
-<ul>
-    <li>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input id="id_username" class="form-control" placeholder="Email address" maxlength="30" name="username" type="text" />
-    </li>
-    <li><label for="id_password1">Password:</label> <input id="id_password1" name="password1" type="password" class="form-control" placeholder="Password" required></li>
-    <li><label for="id_password2">Password confirmation:</label> <input id="id_password2" name="password2" type="password" class="form-control" placeholder="Enter same password for confirmation." required /> </li>
-    <li><input class="btn btn-lg btn-primary btn-block" type="submit"></li>
-</ul>
-  </form>
-{% endcomment %}
+    <div class="disclaimer">This is an exclusive network. <br><a href="/privacy/">Privacy</a> is paramount and in joining
+      you agree to <a href="/terms/">terms</a> and <a href="/conduct/">conduct</a> guidelines.</div>
+  </div>
+</div>
 
+<div id="features">
+  <div class="wrapper">
 
-            </div>
-        </div>
-    </header>
+    <div class="feature">
+      {# <img src="/static/img/feature_2.png" /> #}
+      <h2>Share Skills & Interests</h2>
+      Looking for trusted, like minded people to share your interests?
+    </div>
 
+    <div class="feature">
+      {# <img src="/static/img/feature_1.png" /> #}
+      <h2>Learn & Teach</h2>
+      Share your wisdom!<br>Find help from friends in a safe place.
+    </div>
 
-{% if user and not user.is_anonymous %}
+    <div class="feature" style="margin-right: 0px;">
+      {# <img src="/static/img/feature_3.png" /> #}
+      <h2>Don't miss any upcoming local events!</h2>
+      Receive regular notices about the goings on in regions of your choice.
+    </div>
 
-{% else %}
+    <div class="clr"></div>
 
+    <a href="/" class="cta">Join us!</a>
+    <span>or <a href="/contact/">contact us</a></span>
+  </div>
+</div>
 
-
-
-{% endif %}
-
-
-
-
-
-
- </div>
 {% endblock %}
+
+
+<div id="howitworks">
+  <div id="howitworks-content-static">
+    <h2>How it works?</h2>
+
+    <div class="step1">
+      {# <img src="/static/img/hiw_step1.png" /> #}
+      <h3></h3>
+      <p></p>
+    </div>
+
+    <div class="step2">
+      {# <img src="/static/img/hiw_step2.png" /> #}
+      <h3></h3>
+      <p></p>
+    </div>
+
+    <div class="step3">
+      {# <img src="/static/img/hiw_step3.png" /> #}
+      <h3></h3>
+      <p></p>
+    </div>
+
+    <div class="clr"></div>
+  </div>
+  <div class="clr"></div>
+</div>

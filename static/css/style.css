@@ -1,0 +1,2116 @@
+/*=======================================================================================
+  Reset
+=======================================================================================*/
+a,
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+canvas,
+caption,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+section,
+small,
+span,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+date,
+tr,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+a,
+ins,
+del {
+  text-decoration: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+caption,
+th {
+  text-align: left;
+}
+blockquote:before,
+blockquote:after,
+q:after,
+q:before {
+  content: "";
+}
+/*=======================================================================================
+  BASE.css
+=======================================================================================*/
+.clr {
+  clear: both;
+}
+.fixed {
+  position: fixed;
+  top: 0px;
+}
+body {
+  overflow-x: hidden;
+}
+a {
+  color: #3498db;
+}
+#nav {
+  width: 100%;
+  background: white;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  border-bottom: 1px solid #e0dfde;
+}
+#nav .wrapper {
+  width: 940px;
+  padding: 17px 20px;
+  margin: 0px auto;
+}
+#nav .wrapper img.logo {
+  float: left;
+}
+#nav .wrapper a.logo {
+  font-family: 'Playfair Display', serif;
+}
+#nav .wrapper ul {
+  float: right;
+  margin: 0;
+}
+#nav .wrapper ul li {
+  float: left;
+  font-size: 12px;
+  font-family: 'Open Sans', sans;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #918b86;
+  margin-left: 35px;
+  padding-top: 5px;
+}
+#nav .wrapper ul li h3 {
+  font-weight: 600;
+}
+#nav .wrapper ul li a {
+  color: #918b86;
+}
+#nav .wrapper ul li a.active {
+  border-bottom: 1px solid #918b86;
+}
+#nav .wrapper ul li.highlighted a {
+  color: #3498db;
+}
+#nav .wrapper ul li.highlighted a.active {
+  border-bottom: 1px solid #3498db;
+}
+.cta {
+  display: block;
+  margin: 50px auto 20px;
+  padding: 15px 0px;
+  background: #3498db;
+  color: white;
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  width: 200px;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  line-height: 100% !important;
+  font-weight: 300 !important;
+}
+.cta:hover {
+  text-decoration: none !important;
+}
+footer {
+  width: 100%;
+  background: #312d2a;
+}
+footer .wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+footer .wrapper .logo {
+  float: left;
+  margin-right: 70px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+footer .wrapper ul {
+  float: left;
+  margin: 0;
+  width: 150px;
+  margin-right: 30px;
+}
+footer .wrapper ul li {
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #918b86;
+  margin-left: 20px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+footer .wrapper ul li a {
+  color: #918b86;
+}
+footer .wrapper ul li a:hover {
+  color: white;
+}
+footer .wrapper ul li.header {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans;
+  font-weight: bold;
+}
+footer .wrapper ul li.active {
+  color: white;
+}
+footer .wrapper ul:nth-child(3) {
+  margin-right: 60px;
+}
+footer .wrapper p {
+  float: right;
+  font-size: 12px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #918b86;
+  margin-top: 10px;
+}
+form label {
+  margin-right: 20px;
+}
+form p,
+form li {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 170%;
+  color: #918b86;
+  margin-bottom: 20px;
+}
+form input[type="email"],
+form input[type="email"]:focus,
+form input[type="password"],
+form input[type="password"]:focus {
+  background: url(../img/signin-email.png) no-repeat 10px center #f9f8f7;
+  border: 1px solid #e0dfde;
+  border-radius: 3px;
+  padding: 15px 15px 15px 43px;
+  width: 270px;
+  color: #918b86;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 15px 0;
+  float: none;
+}
+form input[type="password"] {
+  background: url(../img/signin-password.png) no-repeat 10px center #f9f8f7;
+}
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+  background: url(../img/signin-email-focus.png) no-repeat 10px center #ffffff;
+  border: 1px solid #3498db;
+  color: #3498db;
+}
+form input[type="password"]:focus {
+  background: url(../img/signin-password-focus.png) no-repeat 10px center #ffffff;
+}
+form input[type="submit"] {
+  display: block;
+  padding: 15px 25px;
+  background: #3498db;
+  color: white;
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer !important;
+  margin-left: 248px;
+}
+form input[type="text"] {
+  background: #f9f8f7;
+  border: 1px solid #e0dfde;
+  border-radius: 3px;
+  padding: 15px;
+  width: 270px;
+  color: #918b86;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 15px 0;
+  float: none;
+}
+form input[type="text"]:focus {
+  background: white;
+  border: 1px solid #3498db;
+  color: #3498db;
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #918b86;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  height: 100%;
+}
+/*=======================================================================================
+  Homepage
+=======================================================================================*/
+#background_parallax {
+  background: url(../img/background_photo.jpg) no-repeat center bottom;
+  height: 640px;
+}
+#background_parallax p {
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+  margin: 30px auto 0;
+  line-height: 150%;
+  width: 75%;
+  text-align: center;
+}
+#background_parallax p a {
+  color: white;
+  text-decoration: underline;
+}
+#tagline {
+  background: rgba(0, 0, 0, 0.45);
+  width: calc(80%);
+  height: 590px; /* 440 */
+  padding: 50px 10% 0; /* 200 */
+  /*margin-top: 200px;
+
+    left:50%;
+    margin-left: -415px;
+    width: 940px;*/
+  text-align: center;
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+}
+#tagline h1,
+#tagline .subtitle {
+  color: white;
+  font-family: 'Open Sans', sans;
+  font-size: 72px;
+  font-weight: 700;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+  line-height: 100%;
+}
+#tagline .subtitle {
+  font-size: 44px;
+  margin-bottom: 20px;
+  display: block;
+}
+#tagline a.learnmore {
+  color: white;
+  font-weight: 500;
+  text-decoration: underline;
+}
+#tagline .cta {
+  margin: 50px auto 10px;
+  width: 250px;
+  text-shadow: none;
+  padding: 20px 25px;
+}
+#tagline .disclaimer {
+  font-size: 12px;
+  text-shadow: none !important;
+  font-weight: 300;
+}
+#tagline .disclaimer a {
+  color: white;
+  text-decoration: underline;
+}
+#tagline form {
+  margin: 30px auto 15px;
+  width: 720px;
+}
+#tagline form input[type="email"],
+#tagline form input[type="password"] {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding-left: 20px;
+  width: 200px;
+  float: left;
+  margin: 10px 15px 0 0;
+}
+#tagline form ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+#tagline form :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+#tagline form ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+#tagline form :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+#tagline form input[type="email"]:focus,
+#tagline form input[type="password"]:focus {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #3498db;
+  color: #3498db;
+}
+#tagline form input[type="email"]:focus::-webkit-input-placeholder,
+#tagline form input[type="password"]:focus::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #3498db;
+}
+#tagline form input[type="email"]:focus:-moz-placeholder,
+#tagline form input[type="password"]:focus:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #3498db;
+}
+#tagline form input[type="email"]:focus::-moz-placeholder,
+#tagline form input[type="password"]:focus::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #3498db;
+}
+#tagline form input[type="email"]:focus:-ms-input-placeholder,
+#tagline form input[type="password"]:focus:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #3498db;
+}
+#tagline form input[type="password"]:focus {
+  background: rgba(255, 255, 255, 0.7);
+}
+#tagline form input[type="submit"] {
+  font-weight: 300;
+}
+div#howitworks {
+  width: 940px;
+  padding: 20px 0px;
+  margin: 80px auto;
+  position: relative;
+  text-align: center;
+}
+div#howitworks #howitworks-content {
+  width: 960px;
+}
+div#howitworks h2 {
+  color: #49433e;
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+div#howitworks .step1,
+div#howitworks .step2,
+div#howitworks .step3 {
+  float: left;
+  width: 300px;
+}
+div#howitworks .step1 h3,
+div#howitworks .step2 h3,
+div#howitworks .step3 h3 {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  color: #49433e;
+  font-family: 'Open Sans', sans;
+  font-size: 18px;
+  font-weight: 400;
+}
+div#howitworks .step1 p,
+div#howitworks .step2 p,
+div#howitworks .step3 p {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #918b86;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 400;
+  padding: 0px 20px;
+}
+div#howitworks .step1 {
+  margin: 45px 0 0 320px;
+  height: 180px;
+}
+div#howitworks .step1 #animation1 {
+  height: 140px;
+  margin-left: 100px;
+}
+div#howitworks .step1 #animation1 .back {
+  width: 101px;
+  height: 141px;
+  background: url(../img/hiw-step1-back.png);
+  position: absolute;
+  z-index: 100;
+}
+div#howitworks .step1 #animation1 .top {
+  width: 101px;
+  height: 141px;
+  background: url(../img/hiw-step1-top.png);
+  position: absolute;
+  z-index: 300;
+}
+div#howitworks .step1 #animation1 .arrows {
+  width: 27px;
+  height: 60px;
+  background: url(../img/hiw-step1-arrows.png);
+  position: absolute;
+  z-index: 200;
+  background-position: 0px 21px;
+  margin-top: 40px;
+  margin-left: 35px;
+}
+div#howitworks .step2 {
+  margin-left: 30px;
+}
+div#howitworks .step2 h3 {
+  margin-top: 21px;
+}
+div#howitworks .step2 #animation2 {
+  height: 161px;
+  width: 300px;
+  margin-top: 38px;
+  margin-left: -25px;
+}
+div#howitworks .step2 #animation2 .back {
+  width: 352px;
+  height: 160px;
+  background: url(../img/hiw-step2-back.png);
+  position: absolute;
+  z-index: 100;
+}
+div#howitworks .step2 #animation2 .top {
+  width: 352px;
+  height: 160px;
+  background: url(../img/hiw-step2-top.png);
+  position: absolute;
+  z-index: 300;
+}
+div#howitworks .step2 #animation2 .pages {
+  width: 352px;
+  height: 160px;
+  background: url(../img/hiw-step2-pages.png) repeat-x;
+  position: absolute;
+  z-index: 200;
+  background-position: 0px 0px;
+  margin-top: 18px;
+}
+div#howitworks .step3 {
+  margin-top: 22px;
+  margin-left: 30px;
+}
+div#howitworks .step3 h3 {
+  margin-top: 23px;
+}
+div#howitworks .step3 #animation3 {
+  height: 158px;
+  width: 117px;
+  margin-top: 17px;
+  margin-left: 93px;
+}
+div#howitworks .step3 #animation3 .back {
+  width: 117px;
+  height: 158px;
+  background: url(../img/hiw-step3-back.png);
+  position: absolute;
+  z-index: 100;
+}
+div#howitworks .step3 #animation3 .pdf {
+  width: 72px;
+  height: 130px;
+  background: url(../img/hiw-step3-pdf.png);
+  position: absolute;
+  z-index: 200;
+  margin: 11px 0 0 14px;
+}
+div#howitworks .step3 #animation3 .zawijak {
+  width: 29px;
+  height: 130px;
+  background: url(../img/hiw-step3-zawijak.png);
+  position: absolute;
+  z-index: 300;
+  margin: 11px 0 0 58px;
+}
+div#howitworks #howitworks-content-static {
+  width: 960px;
+}
+div#howitworks #howitworks-content-static .step1 {
+  margin: 0px;
+}
+div#howitworks #howitworks-content-static .step2 {
+  margin-left: 30px;
+}
+div#howitworks #howitworks-content-static .step2 img {
+  margin-top: 7px;
+  margin-left: -25px;
+}
+div#howitworks #howitworks-content-static .step2 h3 {
+  margin-top: 24px;
+}
+div#howitworks #howitworks-content-static .step3 {
+  margin-top: 7px;
+  margin-left: 30px;
+}
+#portfolio {
+  width: 620px;
+  float: left;
+}
+#portfolio .magazine {
+  width: 140px;
+  float: left;
+  text-align: left;
+  margin-right: 20px;
+  height: 280px;
+  position: relative;
+}
+#portfolio .magazine .magazine-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#portfolio .magazine .cover {
+  background: white;
+  border-radius: 3px;
+  float: left;
+  margin-bottom: 10px;
+  text-align: right;
+  border: 1px solid #d9d9d9;
+}
+#portfolio .magazine .cover img.issue {
+  border-bottom: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+  border-radius: 3px;
+}
+#portfolio .magazine .cover img.corner {
+  position: absolute;
+  right: 0;
+  bottom: 79px;
+  border-radius: 0 0 3px 0;
+}
+#portfolio .magazine .name,
+#portfolio .magazine h5 {
+  color: #49433e;
+  font-size: 16px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: block;
+}
+#portfolio .magazine div.apple,
+#portfolio .magazine div.google,
+#portfolio .magazine div.webviewer {
+  height: 16px;
+  background: url(../img/apple.png) no-repeat 2px top;
+  padding: 0 0 0 22px;
+  margin: 5px 0px;
+}
+#portfolio .magazine div.apple a,
+#portfolio .magazine div.google a,
+#portfolio .magazine div.webviewer a,
+#portfolio .magazine div.apple a:hover,
+#portfolio .magazine div.google a:hover,
+#portfolio .magazine div.webviewer a:hover {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #3498db;
+}
+#portfolio .magazine div.apple a:hover,
+#portfolio .magazine div.google a:hover,
+#portfolio .magazine div.webviewer a:hover {
+  text-decoration: underline;
+}
+#portfolio .magazine div.google {
+  background: url(../img/googleplay.png) no-repeat left top;
+}
+#portfolio .magazine div.webviewer {
+  background: url(../img/webviewer.png) no-repeat left top;
+}
+#portfolio .magazine:last-child {
+  margin-right: 0px;
+}
+#features {
+  background: rgba(244, 242, 239, 0.5);
+  width: 100%;
+  text-align: center;
+  padding: 100px 0 130px 0;
+  color: #918b86;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+#features a {
+  color: #3498db;
+  font-weight: 600;
+}
+#features a:hover {
+  text-decoration: underline;
+}
+#features .wrapper {
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 1000px;
+}
+#features .wrapper .feature {
+  width: 320px;
+  margin-right: 20px;
+  float: left;
+}
+#features .wrapper .feature img {
+  margin-bottom: 60px;
+}
+#features .wrapper .feature h2,
+#features .wrapper .feature .subtitle {
+  color: #49433e;
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  margin-bottom: 15px;
+  display: block;
+  line-height: 32px;
+}
+#features .wrapper .feature:last-child {
+  margin-right: 0px;
+}
+#features .wrapper .feature:nth-child(2) img {
+  margin-bottom: 73px;
+}
+#features .wrapper .cta {
+  display: block;
+  margin: 50px auto 20px;
+  padding: 20px 0px;
+  background: #3498db;
+  color: white;
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  width: 330px;
+  border-radius: 3px;
+}
+section#about,
+section#features-page,
+section#networks,
+section#how-it-works-page,
+section#profile,
+section#flatpage {
+  margin-top: 60px;
+}
+section#about header,
+section#features-page header,
+section#networks header,
+section#how-it-works-page header,
+section#profile header,
+section#flatpage header,
+section#about #networks-table,
+section#features-page #networks-table,
+section#networks #networks-table,
+section#how-it-works-page #networks-table,
+section#profile #networks-table,
+section#flatpage #networks-table {
+  background: rgba(244, 242, 239, 0.5);
+}
+section#about header .wrapper,
+section#features-page header .wrapper,
+section#networks header .wrapper,
+section#how-it-works-page header .wrapper,
+section#profile header .wrapper,
+section#flatpage header .wrapper,
+section#about #networks-table .wrapper,
+section#features-page #networks-table .wrapper,
+section#networks #networks-table .wrapper,
+section#how-it-works-page #networks-table .wrapper,
+section#profile #networks-table .wrapper,
+section#flatpage #networks-table .wrapper {
+  width: 940px;
+  padding: 30px 20px; /* here 70px 20px; */
+  margin: 0 auto;
+}
+section#about header .wrapper h1,
+section#features-page header .wrapper h1,
+section#networks header .wrapper h1,
+section#how-it-works-page header .wrapper h1,
+section#profile header .wrapper h1,
+section#flatpage header .wrapper h1,
+section#about #networks-table .wrapper h1,
+section#features-page #networks-table .wrapper h1,
+section#networks #networks-table .wrapper h1,
+section#how-it-works-page #networks-table .wrapper h1,
+section#profile #networks-table .wrapper h1,
+section#flatpage #networks-table .wrapper h1 {
+  color: #49433e;
+  font-size: 48px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  float: left;
+  margin: 0;
+  line-height: 100%;
+}
+section#about header .wrapper h2,
+section#features-page header .wrapper h2,
+section#networks header .wrapper h2,
+section#how-it-works-page header .wrapper h2,
+section#profile header .wrapper h2,
+section#flatpage header .wrapper h2,
+section#about #networks-table .wrapper h2,
+section#features-page #networks-table .wrapper h2,
+section#networks #networks-table .wrapper h2,
+section#how-it-works-page #networks-table .wrapper h2,
+section#profile #networks-table .wrapper h2,
+section#flatpage #networks-table .wrapper h2,
+section#about header .wrapper .subtitle,
+section#features-page header .wrapper .subtitle,
+section#networks header .wrapper .subtitle,
+section#how-it-works-page header .wrapper .subtitle,
+section#profile header .wrapper .subtitle,
+section#flatpage header .wrapper .subtitle,
+section#about #networks-table .wrapper .subtitle,
+section#features-page #networks-table .wrapper .subtitle,
+section#networks #networks-table .wrapper .subtitle,
+section#how-it-works-page #networks-table .wrapper .subtitle,
+section#profile #networks-table .wrapper .subtitle,
+section#flatpage #networks-table .wrapper .subtitle {
+  color: #918b86;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  float: left;
+  margin: 16px 0 0 35px;
+  display: block;
+}
+section#about header .wrapper .cta,
+section#features-page header .wrapper .cta,
+section#networks header .wrapper .cta,
+section#how-it-works-page header .wrapper .cta,
+section#profile header .wrapper .cta,
+section#flatpage header .wrapper .cta,
+section#about #networks-table .wrapper .cta,
+section#features-page #networks-table .wrapper .cta,
+section#networks #networks-table .wrapper .cta,
+section#how-it-works-page #networks-table .wrapper .cta,
+section#profile #networks-table .wrapper .cta,
+section#flatpage #networks-table .wrapper .cta {
+  width: 170px;
+  float: right;
+}
+section#about content .wrapper,
+section#features-page content .wrapper,
+section#networks content .wrapper,
+section#how-it-works-page content .wrapper,
+section#profile content .wrapper,
+section#flatpage content .wrapper {
+  width: 940px;
+  padding: 60px 20px;
+  margin: 0 auto;
+}
+section#about content .wrapper .column-left,
+section#features-page content .wrapper .column-left,
+section#networks content .wrapper .column-left,
+section#how-it-works-page content .wrapper .column-left,
+section#profile content .wrapper .column-left,
+section#flatpage content .wrapper .column-left {
+  width: 380px;
+  float: left;
+}
+section#about content .wrapper .column-right,
+section#features-page content .wrapper .column-right,
+section#networks content .wrapper .column-right,
+section#how-it-works-page content .wrapper .column-right,
+section#profile content .wrapper .column-right,
+section#flatpage content .wrapper .column-right {
+  width: 460px;
+  margin-left: 100px;
+  float: left;
+}
+section#about content .wrapper .column-right h4,
+section#features-page content .wrapper .column-right h4,
+section#networks content .wrapper .column-right h4,
+section#how-it-works-page content .wrapper .column-right h4,
+section#profile content .wrapper .column-right h4,
+section#flatpage content .wrapper .column-right h4 {
+  color: #49433e;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+section#about content .wrapper .column-right .mini-column-left,
+section#features-page content .wrapper .column-right .mini-column-left,
+section#networks content .wrapper .column-right .mini-column-left,
+section#how-it-works-page content .wrapper .column-right .mini-column-left,
+section#profile content .wrapper .column-right .mini-column-left,
+section#flatpage content .wrapper .column-right .mini-column-left {
+  width: 220px;
+  margin-right: 20px;
+  float: left;
+}
+section#about content .wrapper .column-right .mini-column-left p,
+section#features-page content .wrapper .column-right .mini-column-left p,
+section#networks content .wrapper .column-right .mini-column-left p,
+section#how-it-works-page content .wrapper .column-right .mini-column-left p,
+section#profile content .wrapper .column-right .mini-column-left p,
+section#flatpage content .wrapper .column-right .mini-column-left p {
+  line-height: 200% !important;
+}
+section#about content .wrapper .column-right .mini-column-right,
+section#features-page content .wrapper .column-right .mini-column-right,
+section#networks content .wrapper .column-right .mini-column-right,
+section#how-it-works-page content .wrapper .column-right .mini-column-right,
+section#profile content .wrapper .column-right .mini-column-right,
+section#flatpage content .wrapper .column-right .mini-column-right {
+  width: 220px;
+  float: left;
+}
+section#about content .wrapper .column-right .mini-column-right p,
+section#features-page content .wrapper .column-right .mini-column-right p,
+section#networks content .wrapper .column-right .mini-column-right p,
+section#how-it-works-page content .wrapper .column-right .mini-column-right p,
+section#profile content .wrapper .column-right .mini-column-right p,
+section#flatpage content .wrapper .column-right .mini-column-right p {
+  line-height: 200% !important;
+}
+section#about content .wrapper .column-right .mini-column-right p a,
+section#features-page content .wrapper .column-right .mini-column-right p a,
+section#networks content .wrapper .column-right .mini-column-right p a,
+section#how-it-works-page content .wrapper .column-right .mini-column-right p a,
+section#profile content .wrapper .column-right .mini-column-right p a,
+section#flatpage content .wrapper .column-right .mini-column-right p a {
+  color: #3498db;
+}
+section#about content .wrapper .section,
+section#features-page content .wrapper .section,
+section#networks content .wrapper .section,
+section#how-it-works-page content .wrapper .section,
+section#profile content .wrapper .section,
+section#flatpage content .wrapper .section {
+  margin-bottom: 40px;
+}
+section#about content .wrapper .section h3,
+section#features-page content .wrapper .section h3,
+section#networks content .wrapper .section h3,
+section#how-it-works-page content .wrapper .section h3,
+section#profile content .wrapper .section h3,
+section#flatpage content .wrapper .section h3 {
+  color: #49433e;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+section#about content .wrapper .section p,
+section#features-page content .wrapper .section p,
+section#networks content .wrapper .section p,
+section#how-it-works-page content .wrapper .section p,
+section#profile content .wrapper .section p,
+section#flatpage content .wrapper .section p {
+  color: #918b86;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 10px;
+}
+section#about content .wrapper .section .person,
+section#features-page content .wrapper .section .person,
+section#networks content .wrapper .section .person,
+section#how-it-works-page content .wrapper .section .person,
+section#profile content .wrapper .section .person,
+section#flatpage content .wrapper .section .person {
+  margin-bottom: 30px;
+}
+section#about content .wrapper .section .person .photo,
+section#features-page content .wrapper .section .person .photo,
+section#networks content .wrapper .section .person .photo,
+section#how-it-works-page content .wrapper .section .person .photo,
+section#profile content .wrapper .section .person .photo,
+section#flatpage content .wrapper .section .person .photo {
+  float: left;
+  margin-right: 20px;
+  height: 100%;
+}
+section#about content .wrapper .section .person .bio,
+section#features-page content .wrapper .section .person .bio,
+section#networks content .wrapper .section .person .bio,
+section#how-it-works-page content .wrapper .section .person .bio,
+section#profile content .wrapper .section .person .bio,
+section#flatpage content .wrapper .section .person .bio {
+  float: left;
+  width: 300px;
+}
+section#about content .wrapper .section .person .bio h5,
+section#features-page content .wrapper .section .person .bio h5,
+section#networks content .wrapper .section .person .bio h5,
+section#how-it-works-page content .wrapper .section .person .bio h5,
+section#profile content .wrapper .section .person .bio h5,
+section#flatpage content .wrapper .section .person .bio h5 {
+  color: #49433e;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  font-size: 18px;
+  float: left;
+  margin-right: 20px;
+}
+section#about content .wrapper .section .person .bio i,
+section#features-page content .wrapper .section .person .bio i,
+section#networks content .wrapper .section .person .bio i,
+section#how-it-works-page content .wrapper .section .person .bio i,
+section#profile content .wrapper .section .person .bio i,
+section#flatpage content .wrapper .section .person .bio i {
+  color: #918b86;
+  font-size: 12px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin-top: 7px;
+  float: left;
+}
+section#about content .wrapper .section .person .bio p,
+section#features-page content .wrapper .section .person .bio p,
+section#networks content .wrapper .section .person .bio p,
+section#how-it-works-page content .wrapper .section .person .bio p,
+section#profile content .wrapper .section .person .bio p,
+section#flatpage content .wrapper .section .person .bio p {
+  margin-top: 12px;
+  font-size: 14px;
+}
+section#about content .wrapper .section .person .bio p a,
+section#features-page content .wrapper .section .person .bio p a,
+section#networks content .wrapper .section .person .bio p a,
+section#how-it-works-page content .wrapper .section .person .bio p a,
+section#profile content .wrapper .section .person .bio p a,
+section#flatpage content .wrapper .section .person .bio p a {
+  color: #3498db;
+  margin-top: 7px;
+  float: left;
+}
+section#about content .wrapper .section form label,
+section#features-page content .wrapper .section form label,
+section#networks content .wrapper .section form label,
+section#how-it-works-page content .wrapper .section form label,
+section#profile content .wrapper .section form label,
+section#flatpage content .wrapper .section form label {
+  color: #918b86;
+  font-size: 13px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  width: 130px;
+  margin: 15px 20px 0 0;
+  float: left;
+}
+section#about content .wrapper .section form input[type="text"],
+section#features-page content .wrapper .section form input[type="text"],
+section#networks content .wrapper .section form input[type="text"],
+section#how-it-works-page content .wrapper .section form input[type="text"],
+section#profile content .wrapper .section form input[type="text"],
+section#flatpage content .wrapper .section form input[type="text"],
+section#about content .wrapper .section form input[type="text"]:focus,
+section#features-page content .wrapper .section form input[type="text"]:focus,
+section#networks content .wrapper .section form input[type="text"]:focus,
+section#how-it-works-page content .wrapper .section form input[type="text"]:focus,
+section#profile content .wrapper .section form input[type="text"]:focus,
+section#flatpage content .wrapper .section form input[type="text"]:focus,
+section#about content .wrapper .section form textarea,
+section#features-page content .wrapper .section form textarea,
+section#networks content .wrapper .section form textarea,
+section#how-it-works-page content .wrapper .section form textarea,
+section#profile content .wrapper .section form textarea,
+section#flatpage content .wrapper .section form textarea,
+section#about content .wrapper .section form textarea:focus,
+section#features-page content .wrapper .section form textarea:focus,
+section#networks content .wrapper .section form textarea:focus,
+section#how-it-works-page content .wrapper .section form textarea:focus,
+section#profile content .wrapper .section form textarea:focus,
+section#flatpage content .wrapper .section form textarea:focus {
+  background: #f9f8f7;
+  border: 1px solid #e0dfde;
+  border-radius: 3px;
+  padding: 15px 15px;
+  width: 270px;
+  color: #918b86;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+}
+section#about content .wrapper .section form textarea,
+section#features-page content .wrapper .section form textarea,
+section#networks content .wrapper .section form textarea,
+section#how-it-works-page content .wrapper .section form textarea,
+section#profile content .wrapper .section form textarea,
+section#flatpage content .wrapper .section form textarea,
+section#about content .wrapper .section form textarea:focus,
+section#features-page content .wrapper .section form textarea:focus,
+section#networks content .wrapper .section form textarea:focus,
+section#how-it-works-page content .wrapper .section form textarea:focus,
+section#profile content .wrapper .section form textarea:focus,
+section#flatpage content .wrapper .section form textarea:focus {
+  height: 130px;
+  line-height: 150%;
+}
+section#about content .wrapper .section form input[type="text"]:focus,
+section#features-page content .wrapper .section form input[type="text"]:focus,
+section#networks content .wrapper .section form input[type="text"]:focus,
+section#how-it-works-page content .wrapper .section form input[type="text"]:focus,
+section#profile content .wrapper .section form input[type="text"]:focus,
+section#flatpage content .wrapper .section form input[type="text"]:focus,
+section#about content .wrapper .section form textarea:focus,
+section#features-page content .wrapper .section form textarea:focus,
+section#networks content .wrapper .section form textarea:focus,
+section#how-it-works-page content .wrapper .section form textarea:focus,
+section#profile content .wrapper .section form textarea:focus,
+section#flatpage content .wrapper .section form textarea:focus {
+  background: white;
+  border: 1px solid #3498db;
+  color: #3498db;
+}
+section#about content .wrapper .section form input[type="submit"],
+section#features-page content .wrapper .section form input[type="submit"],
+section#networks content .wrapper .section form input[type="submit"],
+section#how-it-works-page content .wrapper .section form input[type="submit"],
+section#profile content .wrapper .section form input[type="submit"],
+section#flatpage content .wrapper .section form input[type="submit"] {
+  display: block;
+  padding: 15px 0;
+  background: #3498db;
+  color: white;
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  text-align: center;
+  width: 300px;
+  border-radius: 3px;
+  margin-right: 8px;
+  float: right;
+  border: 0;
+  cursor: pointer !important;
+}
+section#features-page header,
+section#networks header,
+section#flatpage header {
+  height: 170px; /* here270px */
+  border-bottom: 1px solid #f3f2f1;
+}
+section#features-page content,
+section#networks content,
+section#flatpage content {
+  display: block;
+  width: 941px;
+  margin: -80px auto 200px;
+  background: white;
+  border-radius: 4px;
+  text-align: center;
+  color: #918b86;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+section#features-page content .box,
+section#networks content .box,
+section#flatpage content .box {
+  padding: 60px 40px;
+  width: 232px;
+  border: 1px solid #e5e5e5;
+  float: left;
+  text-align: center;
+  height: 257px;
+}
+section#features-page content .box img,
+section#networks content .box img,
+section#flatpage content .box img {
+  float: none;
+  margin-bottom: 55px;
+}
+section#features-page content .box h2,
+section#networks content .box h2,
+section#flatpage content .box h2 {
+  color: #49433e;
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 600;
+  display: inline;
+}
+section#features-page content .box p,
+section#networks content .box p,
+section#flatpage content .box p {
+  color: #918b86;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 170% !important;
+  margin-top: 25px;
+}
+section#features-page content .box:first-child,
+section#networks content .box:first-child,
+section#flatpage content .box:first-child {
+  border-radius: 4px 0 0 0px;
+}
+section#features-page content .box:nth-last-child(2),
+section#networks content .box:nth-last-child(2),
+section#flatpage content .box:nth-last-child(2) {
+  border-radius: 0 0px 4px 0px;
+}
+section#features-page content .box:nth-last-child(4),
+section#networks content .box:nth-last-child(4),
+section#flatpage content .box:nth-last-child(4) {
+  border-radius: 0 0px 0 4px;
+}
+section#features-page content .box:nth-child(3),
+section#networks content .box:nth-child(3),
+section#flatpage content .box:nth-child(3) {
+  border-radius: 0 4px 0 0;
+}
+section#features-page content .box:nth-child(2),
+section#networks content .box:nth-child(2),
+section#flatpage content .box:nth-child(2) {
+  border-left: 0px;
+  border-right: 0px;
+}
+section#features-page content .box:nth-child(n+4),
+section#networks content .box:nth-child(n+4),
+section#flatpage content .box:nth-child(n+4) {
+  border-top: 0px;
+  border-right: 0px;
+}
+section#features-page content .box:nth-child(3n+6),
+section#networks content .box:nth-child(3n+6),
+section#flatpage content .box:nth-child(3n+6) {
+  border-right: 1px solid #e5e5e5;
+}
+section#features-page content a.link,
+section#networks content a.link,
+section#flatpage content a.link,
+section#features-page content a.link:hover,
+section#networks content a.link:hover,
+section#flatpage content a.link:hover {
+  color: #3498db;
+  font-weight: 500;
+  text-decoration: underline;
+}
+section#features-page content a.link:hover,
+section#networks content a.link:hover,
+section#flatpage content a.link:hover {
+  text-decoration: none;
+}
+section#features-page content .cta,
+section#networks content .cta,
+section#flatpage content .cta {
+  padding: 20px 25px;
+  width: 290px;
+  margin: 0 auto 15px;
+}
+section#networks content,
+section#networks-table content {
+  margin-bottom: 0px;
+}
+section#networks content .box,
+section#networks-table content .box {
+  height: 30px;
+  text-align: center;
+  padding: 30px 40px;
+  background: white;
+  color: #918b86;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 200%;
+}
+section#networks content .box h3,
+section#networks-table content .box h3,
+section#networks content .box h4,
+section#networks-table content .box h4 {
+  color: #49433e;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 2px;
+}
+section#networks content .box h4,
+section#networks-table content .box h4 {
+  font-size: 18px;
+}
+section#networks content .condensed,
+section#networks-table content .condensed {
+  width: 858px;
+  border-right: 1px solid #e0dfde !important;
+  height: 100px;
+}
+section#networks content .bigger,
+section#networks-table content .bigger {
+  height: 38px;
+  color: #918b86;
+  font-size: 13px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+section#networks content .bigger b.name,
+section#networks-table content .bigger b.name {
+  color: #49433e;
+  font-family: 'Open Sans', sans;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 3px;
+  display: block;
+}
+section#networks content .left,
+section#networks-table content .left {
+  text-align: left;
+  color: #918b86;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 200%;
+}
+section#networks content .price,
+section#networks-table content .price {
+  color: #49433e;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  font-size: 18px;
+}
+section#networks content .price b,
+section#networks-table content .price b {
+  font-size: 30px;
+  font-weight: 600;
+}
+section#networks content .box:first-child,
+section#networks-table content .box:first-child {
+  border-radius: 4px 0 0 0px;
+}
+section#networks content .box:nth-last-child(2),
+section#networks-table content .box:nth-last-child(2) {
+  border-radius: 0 0px 4px 0px;
+}
+section#networks content .box:nth-last-child(4),
+section#networks-table content .box:nth-last-child(4) {
+  border-radius: 0 0px 0 4px;
+}
+section#networks content .box:nth-child(3),
+section#networks-table content .box:nth-child(3) {
+  border-radius: 0 4px 0 0;
+}
+section#networks content .box:nth-child(2),
+section#networks-table content .box:nth-child(2) {
+  border-left: 0px;
+  border-right: 0px;
+}
+section#networks content .box:nth-child(n+4),
+section#networks-table content .box:nth-child(n+4) {
+  border-top: 0px;
+  border-right: 0px;
+}
+section#networks content .box:nth-child(3n+7),
+section#networks-table content .box:nth-child(3n+7) {
+  border-right: 1px solid #e5e5e5;
+}
+section#networks section#networks-table,
+section#networks-table section#networks-table {
+  background: rgba(244, 242, 239, 0.5);
+  padding-top: 0; /* 40px */
+  margin-top: -60px;
+}
+section#networks section#networks-table .wrapper,
+section#networks-table section#networks-table .wrapper {
+  padding: 70px 20px 40px 20px;
+}
+section#networks section#networks-table .wrapper h1,
+section#networks-table section#networks-table .wrapper h1 {
+  font-size: 30px;
+}
+section#networks section#networks-table .wrapper p,
+section#networks-table section#networks-table .wrapper p {
+  text-align: center;
+  color: #918b86;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+section#networks section#networks-table content,
+section#networks-table section#networks-table content {
+  margin: 40px auto 40px;
+}
+section#networks section#networks-table content .box:first-child,
+section#networks-table section#networks-table content .box:first-child {
+  border-radius: 4px 0 0 4px;
+}
+section#networks section#networks-table content .box:nth-last-child(2),
+section#networks-table section#networks-table content .box:nth-last-child(2) {
+  border-radius: 0px 4px 4px 0px;
+}
+section#networks .wrapper,
+section#networks-table .wrapper {
+  width: 940px;
+  margin: 70px auto;
+  text-align: center;
+  color: #918b86;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+section#networks .wrapper a.link,
+section#networks-table .wrapper a.link,
+section#networks .wrapper a.link:hover,
+section#networks-table .wrapper a.link:hover {
+  color: #3498db;
+  font-weight: 500;
+  text-decoration: underline;
+}
+section#networks .wrapper a.link:hover,
+section#networks-table .wrapper a.link:hover {
+  text-decoration: none;
+}
+section#networks .wrapper .cta,
+section#networks-table .wrapper .cta {
+  padding: 20px 25px;
+  width: 240px;
+  margin: 0 auto 15px;
+}
+section#features-page .wrapper h1.alert,
+section#about .wrapper h1.alert,
+section#flatpage .wrapper h1.alert {
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  color: #49433e;
+  margin-bottom: 60px;
+}
+section#features-page .wrapper .cta,
+section#about .wrapper .cta,
+section#flatpage .wrapper .cta {
+  padding: 20px 25px 20px 30px;
+  width: 240px;
+  margin: 0 auto 15px;
+  font-weight: 400;
+  text-align: center;
+}
+section#flatpage content .wrapper {
+  padding: 30px;
+  width: 880px;
+  color: #918b86;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+}
+section#flatpage content .wrapper h1,
+section#flatpage content .wrapper h2,
+section#flatpage content .wrapper h3,
+section#flatpage content .wrapper h4 {
+  color: #49433e;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 1.8em 0px 0.8em 0px;
+}
+section#flatpage content .wrapper h1 {
+  font-size: 36px;
+}
+section#flatpage content .wrapper h2 {
+  font-size: 30px;
+}
+section#flatpage content .wrapper h4 {
+  font-size: 18px;
+}
+section#flatpage content .wrapper p {
+  margin-bottom: 10px;
+}
+section#flatpage content .wrapper a {
+  color: #3498db;
+}
+section#flatpage content .wrapper a:hover {
+  text-decoration: underline;
+}
+section#flatpage content .wrapper b,
+section#flatpage content .wrapper strong {
+  font-weight: 500;
+}
+section#flatpage content .wrapper ul {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+section#how-it-works-page,
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 170%;
+  color: #918b86;
+}
+section#how-it-works-page content,
+  padding: 60px 0;
+}
+section#how-it-works-page content .wrapper,
+  width: 780px;
+  margin: 0px auto;
+}
+section#how-it-works-page content .wrapper h2,
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  color: #49433e;
+  margin-bottom: 15px;
+  line-height: 150%;
+}
+section#how-it-works-page content .wrapper p,
+  margin-bottom: 10px;
+}
+section#how-it-works-page content .wrapper .left,
+  float: left;
+  margin-right: 140px;
+  width: 320px;
+  text-align: left;
+}
+section#how-it-works-page content .wrapper .right,
+  float: left;
+  width: 320px;
+  text-align: left;
+}
+section#how-it-works-page a.link,
+section#how-it-works-page a.link:hover {
+  color: #3498db;
+  font-weight: 500;
+  text-decoration: underline;
+}
+section#how-it-works-page a.link:hover{
+  text-decoration: none;
+}
+section#how-it-works-page .cta {
+  padding: 20px 25px;
+  width: 290px;
+  margin: 0 auto 15px;
+}
+section#signin {
+  position: relative;
+  margin-bottom: -385px;
+  min-height: 100%;
+}
+section#signin .wrapper {
+  width: 940px;
+  padding-top: 50px;
+  margin: 0px auto 0;
+  text-align: center;
+}
+section#signin .wrapper .logo {
+  margin-bottom: 40px;
+  max-width: 100px;
+}
+section#signin .wrapper h1,
+section#signin .wrapper h3 {
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  color: #49433e;
+  margin-bottom: 30px;
+  line-height: 150%;
+}
+section#signin .wrapper h3 {
+  margin-bottom: 30px;
+  font-size: 15px;
+  font-weight: 300;
+}
+section#signin .wrapper form p,
+section#signin .wrapper form li {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 170%;
+  color: #918b86;
+  margin-bottom: 20px;
+}
+section#signin .wrapper form input[type="email"],
+section#signin .wrapper form input[type="email"]:focus,
+section#signin .wrapper form input[type="password"],
+section#signin .wrapper form input[type="password"]:focus {
+  background: url(../img/signin-email.png) no-repeat 10px center #f9f8f7;
+  border: 1px solid #e0dfde;
+  border-radius: 3px;
+  padding: 15px 15px 15px 43px;
+  width: 270px;
+  color: #918b86;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  float: none;
+}
+section#signin .wrapper form input[type="password"] {
+  background: url(../img/signin-password.png) no-repeat 10px center #f9f8f7;
+}
+section#signin .wrapper form input[type="email"]:focus,
+section#signin .wrapper form input[type="password"]:focus {
+  background: url(../img/signin-email-focus.png) no-repeat 10px center #ffffff;
+  border: 1px solid #3498db;
+  color: #3498db;
+}
+section#signin .wrapper form input[type="password"]:focus {
+  background: url(../img/signin-password-focus.png) no-repeat 10px center #ffffff;
+}
+section#signin .wrapper form input[type="submit"] {
+  display: block;
+  padding: 15px 0;
+  background: #3498db;
+  color: white;
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 300;
+  text-align: center;
+  width: 330px;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer !important;
+  margin-left: 305px;
+}
+section#signin .wrapper form p {
+  width: 330px;
+  margin: 0 auto 10px;
+  text-align: left;
+  font-size: 12px;
+}
+section#signin .wrapper .links {
+  color: #918b86;
+  font-size: 12px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  width: 330px;
+  margin: 10px auto 30px;
+}
+section#signin .wrapper .links span {
+  display: block;
+}
+section#signin .wrapper .links .left {
+  float: left;
+}
+section#signin .wrapper .links .right {
+  float: right;
+}
+section#signin:after {
+  content: "";
+  display: block;
+  height: 385px;
+}
+.browsers {
+  height: 385px;
+  width: 940px;
+  margin: 0 auto;
+}
+section#profile header .wrapper {
+  text-align: center;
+}
+section#profile header .wrapper h1,
+section#profile header .wrapper h2,
+section#profile header .wrapper .subtitle {
+  float: none;
+}
+section#profile content .wrapper {
+  width: 800px;
+  min-height: 500px;
+}
+section#profile content .wrapper .instructions {
+  width: 300px;
+  float: right;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 170%;
+  color: #918b86;
+}
+section#profile content .wrapper .instructions h3 {
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  color: #49433e;
+  margin-bottom: 20px;
+  line-height: 150%;
+}
+section#profile content .wrapper .instructions p {
+  margin-bottom: 20px;
+}
+section#profile content .wrapper .instructions form .form-input-file-bckg {
+  background: #f9f8f7;
+  border: 1px solid #e0dfde;
+  border-radius: 3px;
+  padding: 15px 15px;
+  width: 270px;
+  color: #918b86;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+}
+section#profile content .wrapper .instructions form input[type="submit"] {
+  display: block;
+  padding: 15px 50px;
+  background: #3498db;
+  color: white;
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer !important;
+  margin-left: 0;
+}
+section#profile content .wrapper #step-1 {
+  position: absolute;
+  opacity: 1;
+  width: 800px;
+  height: 500px;
+}
+section#profile content .wrapper #step-1 .drop-area {
+  box-shadow: inset 0px 1px 1px rgba(170, 163, 155, 0.5);
+  background: #f2f0ee;
+  width: 300px;
+  height: 420px;
+  text-align: center;
+  border-bottom: 5px solid white;
+  border-radius: 0 2px 2px 0;
+  margin-left: 100px;
+  float: left;
+  cursor: pointer;
+}
+section#profile content .wrapper #step-1 .drop-area form {
+  font-size: 0px;
+  height: 420px;
+  position: absolute;
+  z-index: 200;
+  width: 300px;
+}
+section#profile content .wrapper #step-1 .drop-area img {
+  margin: 144px 0px 0px 0px;
+  left: 200px;
+  position: absolute;
+  z-index: 100;
+}
+section#profile content .wrapper #step-1 .drop-area .progress-text {
+  margin: 160px 0 0 0;
+  font-size: 18px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  color: #918b86;
+}
+section#profile content .wrapper #step-1 .drop-area .progress {
+  width: 200px;
+  margin: 20px 0px 0px 50px;
+}
+section#profile content .wrapper #step-1 .drop-desc {
+  position: absolute;
+  margin-top: 115px;
+}
+section#profile content .wrapper #step-2,
+section#profile content .wrapper #step-3,
+section#profile content .wrapper #step-4 {
+  position: absolute;
+  opacity: 0;
+  width: 800px;
+  height: 500px;
+  right: -800px;
+}
+section#profile content .wrapper #instructions2,
+section#profile content .wrapper #instructions1 {
+  opacity: 0;
+  position: absolute;
+  margin-left: 399px;
+  z-index: 0;
+}
+section#profile content .wrapper #instructions1 {
+  opacity: 1;
+  z-index: 2;
+}
+section#profile content .wrapper #instructions1 p.errorcode {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 170%;
+  color: #E74C3C;
+  margin: 0 !important;
+}
+section#profile content .wrapper #step-2 #ipad-processing,
+section#profile content .wrapper #step-3 #ipad-processing {
+  margin: 50px 0 0 100px;
+  float: left;
+  width: 140px;
+  height: 280px;
+}
+section#profile content .wrapper #step-2 #ipad-processing .back,
+section#profile content .wrapper #step-3 #ipad-processing .back {
+  width: 140px;
+  height: 190px;
+  margin-top: 45px;
+  z-index: 100;
+  position: absolute;
+  background: url(../img/profile-2-animate-back.png) no-repeat;
+}
+@-webkit-keyframes slide {
+  from {
+    background-position: 0px 213px;
+  }
+  to {
+    background-position: 0px 355px;
+  }
+}
+section#profile content .wrapper #step-2 #ipad-processing .pages,
+section#profile content .wrapper #step-3 #ipad-processing .pages {
+  width: 140px;
+  height: 275px;
+  z-index: 200;
+  position: absolute;
+  background: url(../img/profile-2-animate-pages.png);
+  -webkit-animation: slide 1.3s ease infinite;
+}
+section#profile content .wrapper #step-2 #ipad-processing .top,
+section#profile content .wrapper #step-3 #ipad-processing .top {
+  width: 140px;
+  height: 280px;
+  margin-top: -2px;
+  z-index: 300;
+  position: absolute;
+  background: url(../img/profile-2-animate-top.png) no-repeat;
+}
+section#profile content .wrapper #step-2 .instructions,
+section#profile content .wrapper #step-3 .instructions {
+  margin-right: 100px;
+}
+section#profile content .wrapper #step-2 form input[type="text"],
+section#profile content .wrapper #step-3 form input[type="text"],
+section#profile content .wrapper #step-2 form input[type="text"]:focus,
+section#profile content .wrapper #step-3 form input[type="text"]:focus,
+section#profile content .wrapper #step-2 form input[type="password"],
+section#profile content .wrapper #step-3 form input[type="password"],
+section#profile content .wrapper #step-2 form input[type="password"]:focus,
+section#profile content .wrapper #step-3 form input[type="password"]:focus {
+  background: url(../img/signin-email.png) no-repeat 10px center #f9f8f7;
+  border: 1px solid #e0dfde;
+  border-radius: 3px;
+  padding: 15px 15px 15px 43px;
+  width: 270px;
+  color: #918b86;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 15px 0;
+  float: none;
+}
+section#profile content .wrapper #step-2 form input[type="password"],
+section#profile content .wrapper #step-3 form input[type="password"] {
+  background: url(../img/signin-password.png) no-repeat 10px center #f9f8f7;
+}
+section#profile content .wrapper #step-2 form input[type="text"]:focus,
+section#profile content .wrapper #step-3 form input[type="text"]:focus,
+section#profile content .wrapper #step-2 form input[type="password"]:focus,
+section#profile content .wrapper #step-3 form input[type="password"]:focus {
+  background: url(../img/signin-email-focus.png) no-repeat 10px center #ffffff;
+  border: 1px solid #3498db;
+  color: #3498db;
+}
+section#profile content .wrapper #step-2 form input[type="password"]:focus,
+section#profile content .wrapper #step-3 form input[type="password"]:focus {
+  background: url(../img/signin-password-focus.png) no-repeat 10px center #ffffff;
+}
+section#profile content .wrapper #step-2 form input[type="submit"],
+section#profile content .wrapper #step-3 form input[type="submit"] {
+  display: block;
+  padding: 15px 0;
+  background: #3498db;
+  color: white;
+  font-size: 24px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  text-align: center;
+  width: 330px;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer !important;
+  margin-top: 0;
+}
+section#profile content .wrapper #step-3 .instructions {
+  margin-top: 50px;
+}
+section#profile content .wrapper #step-4 .ipad {
+  width: 304px;
+  height: 412px;
+  background: url(../img/profile-4-ipad.png) no-repeat;
+  float: left;
+  margin-left: 100px;
+  position: relative;
+}
+section#profile content .wrapper #step-4 .ipad .magazine {
+  width: 215px;
+  float: left;
+  height: 300px;
+  position: relative;
+  margin: 60px 0 0 44px;
+}
+section#profile content .wrapper #step-4 .ipad .magazine .magazine-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+section#profile content .wrapper #step-4 .ipad .magazine .cover {
+  background: white;
+  border-radius: 2px;
+  float: left;
+  margin-bottom: 10px;
+  text-align: right;
+}
+section#profile content .wrapper #step-4 .ipad .magazine .cover img.issue {
+  border-bottom: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+}
+section#profile content .wrapper #step-4 .ipad .magazine .cover img.corner {
+  position: absolute;
+  margin-top: -33px;
+  margin-left: -28px;
+}
+section#profile content .wrapper #step-4 .cta {
+  border: 0;
+  cursor: pointer !important;
+  margin: 0;
+  width: 270px;
+  text-align: center;
+}
+#social {
+  position: fixed;
+  left: 0px;
+  top: 300px;
+  background: white;
+  padding: 0px 9px;
+  border: 1px solid #E0DFDE;
+  border-left: 0px;
+}
+#social .icon-stack {
+  font-size: 14px !important;
+}
+#social .icon-envelope-alt {
+  font-size: 26px;
+  font-weight: 800;
+}
+#social .icon-envelope-alt:before {
+  content: "@";
+}
+#social p {
+  font-size: 20px;
+  text-align: center;
+  margin: 9px 0;
+}
+section#flatpage #ebook {
+  width: 940px;
+  padding: 0 20px;
+  margin: 0px auto;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 170%;
+  color: #918b86;
+}
+section#flatpage #ebook content {
+  line-height: 150%;
+  background: none;
+  width: 500px;
+  float: left;
+  margin-top: 25px;
+  text-align: left;
+  font-size: 16px;
+  height: 60px;
+}
+section#flatpage #ebook content input[type="email"] {
+  width: 230px;
+  margin-top: 30px;
+  float: left;
+}
+section#flatpage #ebook content input[type="submit"] {
+  font-weight: 300;
+  float: left;
+  margin: 30px 0 0 10px;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+section#flatpage #ebook content .separator div:first-child {
+  height: 1px;
+  width: 150px;
+  background: #918B8D;
+  float: left;
+  margin-top: 12px;
+  margin-right: 10px;
+  margin-left: 60px;
+}
+section#flatpage #ebook content .separator div:nth-child(2) {
+  float: left;
+}
+section#flatpage #ebook content .separator div:last-child {
+  height: 1px;
+  width: 150px;
+  background: #918B8D;
+  float: left;
+  margin-top: 12px;
+  margin-left: 10px;
+}
+section#flatpage #ebook h3 {
+  font-family: 'Open Sans';
+  color: #49433E;
+  font-size: 26px;
+  font-weight: 500;
+  margin: 60px 0 15px 0;
+}
+section#flatpage #ebook .col {
+  float: left;
+  width: 440px;
+  margin-right: 30px;
+}
+section#flatpage #ebook ul {
+  list-style-type: disc;
+}
+section#flatpage #ebook .example img {
+  border: 1px solid #e0dfde;
+  border-radius: 6px;
+}
+section#flatpage .social {
+  background: #F9F8F6;
+  padding: 30px 0px;
+  margin-top: 30px;
+}
+section#flatpage .social .wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+section#flatpage .social h3 {
+  font-family: 'Open Sans';
+  color: #49433E;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0px 0 15px 0;
+  line-height: 100%;
+  padding: 0;
+}
+section#about label[for=id_email] {
+  position: absolute;
+  top: -10000px;
+}
+section#about input#id_email {
+  position: absolute;
+  top: -10000px;
+}
+.alert {
+  font: 13px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: white;
+  border: 0px;
+  width: 100% !important;
+  text-align: center;
+  border-radius: 0px;
+  padding: 15px 30px;
+}
+.alert.alert-success {
+  background: #1abc9c;
+}
+.alert.alert-error {
+  background: #e74c3c;
+}
+.alert.alert-info {
+  background: #3498db;
+}
+.alert.alert-warning {
+  background: #f0ad4e;
+}
+.alert i {
+  margin-right: 3px;
+}
+.alert .close {
+  float: right;
+  color: rgba(255, 255, 255, 0.5);
+}

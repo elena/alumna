@@ -8,7 +8,7 @@
    <section id="networks">
         <header>
             <div class="wrapper">
-                <h1>{{ event.name }}</h1>
+                <h1>Networks</h1>
                 <span class="subtitle">Our heroes.</span>
             </div>
         </header>
@@ -35,10 +35,13 @@
 
             <content>
               {% for network in object_list %}
-                <div class="box bigger left">
-                  {% thumbnail network.logo "x75" as im %}
-    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"
-         style="margin: -20px 0 0 -15px;">
+                <div class="box bigger left"
+                     style="padding: 5px; height: 88px;"
+                     >
+                  {% thumbnail network.logo "232x88" as im %}
+                  <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"
+                       style="margin:{{ item.image|margin:"244x100" }}"
+                       >
                   {% endthumbnail %}
                 </div>
                 <div class="box bigger price">

@@ -1,137 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>{% load staticfiles %}
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="Issue Stand is the easiest and fastest mobile publishing tool. We help small to medium publishers take their first steps in the world of digital press." >
 
-<head>
+    <meta property="og:image" content="https://issuestand.com{{ STATIC_URL }}img/issue_stand_logo.png" />
+    <meta property="og:type" content="product" />
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Alumna | connection</title>
 
-    <title>Alumna Network</title>
+    <!--JS FILES STARTS-->
+    <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+    <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
 
-    <!-- Custom CSS -->
-    <link href="/static/css/agency.css" rel="stylesheet">
+    <!--GOOGLE FONTS-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Satisfy' rel='stylesheet' type='text/css'>
 
-    <!-- Custom Fonts -->
-    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <!--CSS FILES STARTS-->
+    <link rel="shortcut icon" href="{% static "img/favicon.png" %}">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
 
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+    </script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+{% block head %}{% endblock %}
+{% block extraheader %}{% endblock %}
 
-    {% block head %}{% endblock %}
-</head>
+  </head>
+  <body>
 
-<body id="page-top" class="index">
+    <div id="nav">
+      <div class="wrapper">
+        <a href="/"
+          style="font-weight: normal; font-family: 'Playfair display', cursive; font-size: 1.6em;" >
+          {# <img src="{% static "img/logo.png" %}" alt="Issue Stand" class="logo" /> #} Alumna Network
+        </a>
+        <ul>
+          <li><h3><a href="/how-it-works/">How it works</a></h3></li>
+          <li><h3><a href="/networks/">Networks</a></h3></li>
+{% if user.is_anonymous %}
+          <li class="highlighted"><a href="/auth/login/" rel="nofollow">Sign in</a></li>
+          <li class="highlighted"><a href="/auth/login/{# register/ #}" rel="nofollow">Sign up</a></li>
+{% else %}
+          <li class="highlighted"><a href="{# /profile/{{ user.person.slug }} #}" rel="nofollow">Hello {{ user }}!</a></li>
+{% endif %}
+        </ul>
+        <div class="clr"></div>
+      </div>
+    </div>
 
-  <!-- Navigation -->
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">ALUMNA</a>
-            </div>
+    <div id="social">
+      <p><a href="http://facebook.com/" target="_blank"><i class="icon-facebook-sign icon-large"></i></a></p>
+      <p><a href="http://twitter.com/alumnanet" target="_blank"><i class="icon-twitter-sign icon-large"></i></a></p>
+      <p><a href="https://plus.google.com/" target="_blank"><i class="icon-google-plus-sign icon-large"></i></a></p>
+      <p><a href="http://www.linkedin.com/" target="_blank"><i class="icon-linkedin-sign icon-large"></i></a></p>
+      {# <p><a href="http://blog.issuestand.com/" target="_blank"><i class="icon-tumblr-sign icon-large"></i></a></p> #}
+      <!--<p><a href="http://eepurl.com/GP7U1" target="_blank">
+          <span class="icon-stack">
+            <i class="icon-sign-blank icon-stack-base" style=""></i>
+            <i class="icon-envelope-alt icon-light"></i>
+          </span>
+      </a></p>-->
+    </div>
+        <div class="clr"></div>
+<br>
+<br>
+<br>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="/"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="/">ABOUT</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="/event/shehacks-2015">Sydney SheHack 2015</a>
-                    </li>
-                    {% if user and not user.is_anonymous %}
-                    <li><a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Twitter auth</a></li>
-                    <li><a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a></li>
-                    <li><a>{{ user.get_full_name|default:user.username }}</a></li>
+{% block content %}{% endblock %}
 
-                    {% else %}
-                    <li><a href="{% url 'auth:login' %}?next={{ request.path }}">Login with email</a><br></li>
-                    <li><a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with twitter</a></li>
-                    {% endif %}
+<footer>
+  <div class="wrapper">
+    <ul>
+      <a href="/"
+          style="font-weight: normal; font-family: 'Playfair display', cursive; font-size: 1.5em;" >
+          Alumna Network
+        </a>
+      {# <img src="{% static "img/logo_footer.png" %}" class="logo" /> #}
+    </ul>
+    <ul>
+      {# <li class="header">Product</li> #}
+      <li><a href="/" rel="nofollow">Homepage</a></li>
+      <li><a href="/how-it-works/" rel="nofollow">How it works</a></li>
+    </ul>
+    <ul>
+      <li class="header">Help & support</li>
+      {# <li><a href="http://blog.alumna/" rel="nofollow">Blog</a></li> #}
+      {# <li><a href="http://www.youtube.com/issuestand" rel="nofollow">Videos</a></li> #}
+      {# <li><a href="http://www.slideshare.net/issuestand" rel="nofollow">Presentations</a></li> #}
+      <li><a href="/contact/" rel="nofollow">Contact us</a></li>
+    </ul>
+    <ul>
+      <li class="header">Community</li>
+      <li><a href="http://twitter.com/alumnanet" rel="nofollow">Twitter</a></li>
+      <li><a href="http://facebook.com/alumna" rel="nofollow">Facebook</a></li>
+      {# <li><a href="https://plus.google.com//posts" rel="nofollow">Google+</li> #}
+      {# <li><a href="http://www.linkedin.com/company/alumna" rel="nofollow">LinkedIn</a></li> #}
+    </ul>
+    <ul>
+      <li class="header">Legal</li>
+      <li><a href="/terms/" rel="nofollow">Terms of Use</a></li>
+      <li><a href="/privacy/" rel="nofollow">Privacy</a></li>
+    </ul>
 
+    <div class="clr"></div>
 
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    {% block content %}
-    {% endblock %}
-
-    {% block footer %}
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Alumna 2015.</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="http://twitter.com/alumnanet"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="http:"><i class="fa fa-facebook"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="/">Privacy Policy</a>
-                        </li>
-                        <li><a href="/">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    {% endblock %}
-
-
-    <!-- jQuery -->
-    <script src="/static/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/static/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="/http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="/static/js/classie.js"></script>
-    <script src="/static/js/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="/static/js/jqBootstrapValidation.js"></script>
-    <script src="/static/js/contact_me.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="/static/js/agency.js"></script>
+  </div>
+</footer>
 
 </body>
-
+<!--BODY ENDS  -->
 </html>
+<!--HTML ENDS  -->

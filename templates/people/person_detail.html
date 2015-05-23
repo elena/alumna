@@ -2,4 +2,57 @@
 
 {% block head %}{% endblock %}
 
-{% block content %}{% endblock %}
+{% block content %}
+
+<section id="profile">
+
+  <header>
+    <content>
+    <div class="wrapper">
+
+      <div id="step-1">
+        {# <img src="/static/core/img/try-us-1-drop.png" class="drop-desc" /> #}
+        <div class="drop-area">
+        </div>
+        <div class="instructions">
+          <h3>Upload your PDF file</h3>
+          <p>Drop the PDF file with your magazine, brochure or anything else in the field below. In just 7 minutes you will be able to see your magazine on your tablet! <br />Don't worry, it's completely, 100% free!</p>
+        </div>
+      </div>
+
+    </div>
+    </content>
+  </header>
+
+  <content>
+    <div class="wrapper">
+
+      <div id="step-1">
+        {# <img src="/static/core/img/try-us-1-drop.png" class="drop-desc" /> #}
+        <div class="drop-area">
+          <form action="/try-us/upload/" id="dropzoneStep1" class="dropzone" enctype="multipart/form-data"></form>
+          {# <img src="/static/core/img/try-us-1-pdf.png" class="pdfile" /> #}
+
+          <div class="progress-text" style="display:none;">Uploading: <span>0</span>%</div>
+          <div class="progress progress-striped active" style="display:none;">
+            <div class="bar" style="width: 0%;"></div>
+          </div>
+        </div>
+        <div class="instructions">
+          <h3>Upload your PDF file</h3>
+          <p>Drop the PDF file with your magazine, brochure or anything else in the field below. In just 7 minutes you will be able to see your magazine on your tablet! <br />Don't worry, it's completely, 100% free!</p>
+          <form action="" id="upload">
+            <input type="text" name="name" placeholder="Name of your magazine" /><br />
+            <div class="form-input-file-bckg"><input type="file" id="fileupload_input" accept="application/pdf" /></div>
+            <a href="javascript:void(0);" class="cta submit" style="margin-left: 0; text-align: center; margin-top: 0">Upload PDF</a>
+          </form>
+        </div>
+      </div>
+
+      <div class="clr"></div>
+    </div>
+  </content>
+
+</section>
+
+{% endblock %}

@@ -1,5 +1,54 @@
 {% extends "base.html" %}
 
+{% block extraheader %}
+    <script>
+        $(document).ready(function(){
+            $('#req').focus();
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <section id="signin">
+        <div class="wrapper">
+
+            {# <a href="/"><img src="/static/core/img/logo-signin.png" class="logo"></a> #}
+
+            <h1>Sign in</h1>
+            <form id="form-login" action="." class="formular" method="post" autocomplete="off">
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='J8JNt0NuSCQxsLrLrQmza4VvBtnzMBad' /></div>
+                <!-- fake inputs to prevent Chrome from autofiling inputs -->
+                <input type="email" style="display:none;" />
+                <input type="password" style="display:none;" />
+                <!-- end fake inputs to prevent Chrome from autofiling inputs -->
+
+
+                <input type="email" name="username" id="req" class="validate[required] email" placeholder="Your email" autocomplete="off" /><br />
+                <input type="password" name="password" id="pass" class="validate[required]"  placeholder="Your password" autocomplete="off" />
+                <input type="hidden" name="next" value="" />
+                <input type="submit" name="go" value="Go!" />
+            </form>
+
+            <div class="links">
+                <span class="left">Lost password? <a href="/auth/password_reset/">Reset it</a></span>
+                <span class="right">No account yet? <a href="/">Sign up</a></span>
+                <div style="clear: both;"></div>
+            </div>
+            <div style="clear: both;"></div>
+
+
+        </div>
+    </section>
+
+{% endblock %}
+
+{% comment %}
+
+    <div class="browsers">
+        <img src="/static/core/img/browsers.png" />
+    </div>
+
+
 {% block content %}
 
 {% if form.errors %}
@@ -24,3 +73,5 @@
 </form>
 
 {% endblock %}
+
+{% endcomment %}
